@@ -1,0 +1,445 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\UIpro.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\UIpro.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_UIPRO_DIALOG DIALOGEX 0, 0, 871, 463
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "UIpro"
+MENU IDR_MENU1
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TAB1,"SysTabControl32",0x0,7,2,861,454
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 846, 396
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "System Select",IDC_STATIC,18,16,64,49
+    CONTROL         "5.1CH",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,23,28,36,10
+    CONTROL         "6.1CH",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,23,41,36,10
+    CONTROL         "8  CH",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,23,54,33,10
+    GROUPBOX        "Preset",IDC_STATIC,17,78,105,54
+    PUSHBUTTON      "Reset",IDC_BUTTON2,75,111,35,14
+    PUSHBUTTON      "1",IDC_BUTTON3,25,90,35,14
+    PUSHBUTTON      "2",IDC_BUTTON4,75,90,35,14
+    PUSHBUTTON      "3",IDC_BUTTON5,25,111,35,14
+    GROUPBOX        "Misc",IDC_STATIC,19,202,183,106
+    GROUPBOX        "Input",IDC_STATIC,29,213,51,48
+    CONTROL         "Analog",IDC_RADIO7,"Button",BS_AUTORADIOBUTTON,39,223,38,10
+    CONTROL         "Digital",IDC_RADIO8,"Button",BS_AUTORADIOBUTTON,39,236,35,10
+    CONTROL         "Auto",IDC_RADIO9,"Button",BS_AUTORADIOBUTTON,39,249,31,10
+    GROUPBOX        "Analog",IDC_STATIC,153,214,42,47
+    GROUPBOX        "Digital",IDC_STATIC,87,214,60,47
+    CONTROL         "RCA",IDC_RADIO10,"Button",BS_AUTORADIOBUTTON,159,223,30,10
+    CONTROL         "AUX",IDC_RADIO11,"Button",BS_AUTORADIOBUTTON,159,249,29,10
+    CONTROL         "Optical",IDC_RADIO12,"Button",BS_AUTORADIOBUTTON,97,223,38,10
+    CONTROL         "Coax",IDC_RADIO13,"Button",BS_AUTORADIOBUTTON,97,236,33,10
+    CONTROL         "Bluetooth",IDC_RADIO14,"Button",BS_AUTORADIOBUTTON,97,249,47,10
+    LTEXT           "Auto-Select Delay",IDC_STATIC,77,266,58,8
+    LTEXT           "S",IDC_STATIC,157,266,8,8
+    EDITTEXT        IDC_EDIT_AUTOSELECTDELAY,135,263,19,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_AUTOSELECTSLIDER,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,31,276,165,28
+    CONTROL         "",IDC_SLIDER2,"msctls_trackbar32",TBS_AUTOTICKS | TBS_VERT | TBS_BOTH | WS_TABSTOP,526,47,31,298
+    CONTROL         "",IDC_SLIDER3,"msctls_trackbar32",TBS_AUTOTICKS | TBS_VERT | TBS_BOTH | WS_TABSTOP,416,47,31,298
+    CONTROL         "",IDC_SLIDER4,"msctls_trackbar32",TBS_AUTOTICKS | TBS_VERT | TBS_BOTH | WS_TABSTOP,471,47,31,298
+    CONTROL         "",IDC_SLIDER5,"msctls_trackbar32",TBS_AUTOTICKS | TBS_VERT | TBS_BOTH | WS_TABSTOP,581,47,31,298
+    CONTROL         "",IDC_SLIDER6,"msctls_trackbar32",TBS_AUTOTICKS | TBS_VERT | TBS_BOTH | WS_TABSTOP,636,47,31,298
+    CONTROL         "",IDC_SLIDER7,"msctls_trackbar32",TBS_AUTOTICKS | TBS_VERT | TBS_BOTH | WS_TABSTOP,691,47,31,298
+    CONTROL         "",IDC_SLIDER8,"msctls_trackbar32",TBS_AUTOTICKS | TBS_VERT | TBS_BOTH | WS_TABSTOP,306,47,31,298
+    CONTROL         "",IDC_SLIDER9,"msctls_trackbar32",TBS_AUTOTICKS | TBS_VERT | TBS_BOTH | WS_TABSTOP,361,47,31,298
+    EDITTEXT        IDC_EDIT1,300,35,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,354,35,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,409,35,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,464,35,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,519,35,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,629,35,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT7,574,35,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT8,684,35,40,14,ES_AUTOHSCROLL
+    LTEXT           "CH1",IDC_STATIC,313,24,14,8
+    LTEXT           "CH2",IDC_STATIC,367,24,14,8
+    LTEXT           "CH8",IDC_STATIC,697,24,14,8
+    LTEXT           "CH3",IDC_STATIC,423,24,14,8
+    LTEXT           "CH4",IDC_STATIC,478,24,14,8
+    LTEXT           "CH5",IDC_STATIC,533,24,14,8
+    LTEXT           "CH6",IDC_STATIC,587,24,14,8
+    LTEXT           "CH7",IDC_STATIC,642,24,14,8
+    CONTROL         "选中1",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,217,345,36,10
+END
+
+IDD_DIALOG2 DIALOGEX 0, 0, 849, 405
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "IN1",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_TABSTOP,15,32,26,13
+    CONTROL         "IN2",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_TABSTOP,15,96,26,13
+    CONTROL         "IN3",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_TABSTOP,15,160,26,13
+    CONTROL         "IN4",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_TABSTOP,15,224,26,13
+    CONTROL         "IN5",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_TABSTOP,15,288,26,13
+    CONTROL         "IN6",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_TABSTOP,15,352,26,13
+    CONTROL         174,IDC_KNOB11,"Static",SS_BITMAP | SS_NOTIFY,49,4,80,62
+    CONTROL         174,IDC_KNOB12,"Static",SS_BITMAP | SS_NOTIFY,150,4,80,62
+    CONTROL         174,IDC_KNOB13,"Static",SS_BITMAP | SS_NOTIFY,251,4,80,62
+    CONTROL         174,IDC_KNOB14,"Static",SS_BITMAP | SS_NOTIFY,352,4,80,62
+    CONTROL         174,IDC_KNOB15,"Static",SS_BITMAP | SS_NOTIFY,453,4,80,62
+    CONTROL         174,IDC_KNOB16,"Static",SS_BITMAP | SS_NOTIFY,554,4,80,62
+    CONTROL         174,IDC_KNOB17,"Static",SS_BITMAP | SS_NOTIFY,655,4,80,62
+    CONTROL         174,IDC_KNOB18,"Static",SS_BITMAP | SS_NOTIFY,756,4,80,62
+    CONTROL         174,IDC_KNOB21,"Static",SS_BITMAP | SS_NOTIFY,49,69,80,62
+    CONTROL         174,IDC_KNOB22,"Static",SS_BITMAP | SS_NOTIFY,150,329,80,62
+    CONTROL         174,IDC_KNOB23,"Static",SS_BITMAP | SS_NOTIFY,251,69,80,62
+    CONTROL         174,IDC_KNOB24,"Static",SS_BITMAP | SS_NOTIFY,352,69,80,62
+    CONTROL         174,IDC_KNOB25,"Static",SS_BITMAP | SS_NOTIFY,453,69,80,62
+    CONTROL         174,IDC_KNOB26,"Static",SS_BITMAP | SS_NOTIFY,554,69,80,62
+    CONTROL         174,IDC_KNOB27,"Static",SS_BITMAP | SS_NOTIFY,655,69,80,62
+    CONTROL         174,IDC_KNOB28,"Static",SS_BITMAP | SS_NOTIFY,756,69,80,62
+    CONTROL         174,IDC_KNOB31,"Static",SS_BITMAP | SS_NOTIFY,49,134,80,62
+    CONTROL         174,IDC_KNOB32,"Static",SS_BITMAP | SS_NOTIFY,150,69,80,62
+    CONTROL         174,IDC_KNOB33,"Static",SS_BITMAP | SS_NOTIFY,251,134,80,62
+    CONTROL         174,IDC_KNOB34,"Static",SS_BITMAP | SS_NOTIFY,352,134,80,62
+    CONTROL         174,IDC_KNOB35,"Static",SS_BITMAP | SS_NOTIFY,453,134,80,62
+    CONTROL         174,IDC_KNOB36,"Static",SS_BITMAP | SS_NOTIFY,554,134,80,62
+    CONTROL         174,IDC_KNOB37,"Static",SS_BITMAP | SS_NOTIFY,655,134,80,62
+    CONTROL         174,IDC_KNOB38,"Static",SS_BITMAP | SS_NOTIFY,756,134,80,62
+    CONTROL         174,IDC_KNOB41,"Static",SS_BITMAP | SS_NOTIFY,49,199,80,62
+    CONTROL         174,IDC_KNOB42,"Static",SS_BITMAP | SS_NOTIFY,150,134,80,62
+    CONTROL         174,IDC_KNOB43,"Static",SS_BITMAP | SS_NOTIFY,251,199,73,62
+    CONTROL         174,IDC_KNOB44,"Static",SS_BITMAP | SS_NOTIFY,352,199,80,62
+    CONTROL         174,IDC_KNOB45,"Static",SS_BITMAP | SS_NOTIFY,453,199,80,62
+    CONTROL         174,IDC_KNOB46,"Static",SS_BITMAP | SS_NOTIFY,554,199,80,62
+    CONTROL         174,IDC_KNOB47,"Static",SS_BITMAP | SS_NOTIFY,655,199,80,62
+    CONTROL         174,IDC_KNOB48,"Static",SS_BITMAP | SS_NOTIFY,756,199,80,62
+    CONTROL         174,IDC_KNOB51,"Static",SS_BITMAP | SS_NOTIFY,49,264,80,62
+    CONTROL         174,IDC_KNOB52,"Static",SS_BITMAP | SS_NOTIFY,150,199,80,62
+    CONTROL         174,IDC_KNOB53,"Static",SS_BITMAP | SS_NOTIFY,251,264,80,62
+    CONTROL         174,IDC_KNOB54,"Static",SS_BITMAP | SS_NOTIFY,352,264,80,62
+    CONTROL         174,IDC_KNOB55,"Static",SS_BITMAP | SS_NOTIFY,453,264,80,62
+    CONTROL         174,IDC_KNOB56,"Static",SS_BITMAP | SS_NOTIFY,554,264,80,62
+    CONTROL         174,IDC_KNOB57,"Static",SS_BITMAP | SS_NOTIFY,655,264,80,62
+    CONTROL         174,IDC_KNOB58,"Static",SS_BITMAP | SS_NOTIFY,756,264,80,62
+    CONTROL         174,IDC_KNOB61,"Static",SS_BITMAP | SS_NOTIFY,49,329,80,62
+    CONTROL         174,IDC_KNOB62,"Static",SS_BITMAP | SS_NOTIFY,150,264,80,62
+    CONTROL         174,IDC_KNOB63,"Static",SS_BITMAP | SS_NOTIFY,251,329,80,62
+    CONTROL         174,IDC_KNOB64,"Static",SS_BITMAP | SS_NOTIFY,352,329,80,62
+    CONTROL         174,IDC_KNOB65,"Static",SS_BITMAP | SS_NOTIFY,453,329,80,62
+    CONTROL         174,IDC_KNOB66,"Static",SS_BITMAP | SS_NOTIFY,554,329,80,62
+    CONTROL         174,IDC_KNOB67,"Static",SS_BITMAP | SS_NOTIFY,655,329,80,62
+    CONTROL         174,IDC_KNOB68,"Static",SS_BITMAP | SS_NOTIFY,756,329,80,62
+END
+
+IDD_DIALOG3 DIALOGEX 0, 0, 356, 207
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DIALOG4 DIALOGEX 0, 0, 281, 193
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DIALOG5 DIALOGEX 0, 0, 804, 320
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_STATIC51,"Static",SS_OWNERDRAW | SS_REALSIZEIMAGE,203,34,576,262
+    CONTROL         138,IDC_SLIDER_EQ1,"Static",SS_BITMAP | SS_NOTIFY | WS_TABSTOP,277,116,11,10,WS_EX_TRANSPARENT
+    CONTROL         141,IDC_SLIDER_EQ2,"Static",SS_BITMAP | SS_NOTIFY | SS_REALSIZEIMAGE | WS_TABSTOP,347,116,11,10,WS_EX_TRANSPARENT
+    CONTROL         142,IDC_SLIDER_EQ3,"Static",SS_BITMAP | SS_NOTIFY | WS_TABSTOP,416,116,11,10,WS_EX_TRANSPARENT
+    CONTROL         143,IDC_SLIDER_EQ4,"Static",SS_BITMAP | SS_NOTIFY | WS_TABSTOP,484,116,11,10,WS_EX_TRANSPARENT
+    CONTROL         144,IDC_SLIDER_EQ5,"Static",SS_BITMAP | SS_NOTIFY | WS_TABSTOP,553,116,11,10,WS_EX_TRANSPARENT
+    CONTROL         145,IDC_SLIDER_EQ6,"Static",SS_BITMAP | SS_NOTIFY | WS_TABSTOP,617,116,11,10,WS_EX_TRANSPARENT
+    CONTROL         154,IDC_SLIDER_EQ7,"Static",SS_BITMAP | SS_NOTIFY | WS_TABSTOP,690,116,11,10,WS_EX_TRANSPARENT
+    GROUPBOX        "",IDC_STATIC,195,24,592,281
+    CONTROL         162,IDC_SLIDER_EQL,"Static",SS_BITMAP | SS_NOTIFY | WS_TABSTOP,733,116,11,10,WS_EX_TRANSPARENT
+    CONTROL         163,IDC_SLIDER_EQH,"Static",SS_BITMAP | SS_NOTIFY | WS_TABSTOP,308,116,11,10,WS_EX_TRANSPARENT
+END
+
+IDD_DIALOG6 DIALOGEX 0, 0, 297, 176
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "UIpro.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "UIpro.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_UIPRO_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 868
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 456
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 839
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 389
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 842
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 397
+    END
+
+    IDD_DIALOG3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 349
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 200
+    END
+
+    IDD_DIALOG4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 186
+    END
+
+    IDD_DIALOG5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 799
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 313
+    END
+
+    IDD_DIALOG6, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 290
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 169
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_EQ1                 BITMAP                  "res\\EQ1.bmp"
+IDB_EQ2                 BITMAP                  "res\\EQ2.bmp"
+IDB_EQ3                 BITMAP                  "res\\EQ3.bmp"
+IDB_EQ4                 BITMAP                  "res\\EQ4.bmp"
+IDB_EQ5                 BITMAP                  "res\\EQ5.bmp"
+IDB_EQ6                 BITMAP                  "res\\EQ6.bmp"
+IDB_KNOBBK              BITMAP                  "res\\knob_backgroud.bmp"
+IDB_KNOB1               BITMAP                  "res\\knob1_0.1.bmp"
+IDB_KNOB2               BITMAP                  "res\\knob1_0.2.bmp"
+IDB_KNOB3               BITMAP                  "res\\knob1_0.3.bmp"
+IDB_KNOB4               BITMAP                  "res\\knob1_0.4.bmp"
+IDB_EQ7                 BITMAP                  "res\\EQ7.bmp"
+IDB_KNOB5               BITMAP                  "res\\knob1_0.5.bmp"
+IDB_KNOB6               BITMAP                  "res\\knob1_0.6.bmp"
+IDB_KNOB7               BITMAP                  "res\\knob1_0.7.bmp"
+IDB_KNOB8               BITMAP                  "res\\knob1_0.8.bmp"
+IDB_KNOB9               BITMAP                  "res\\knob1_0.9.bmp"
+IDB_KNOB0               BITMAP                  "res\\knob1_0.bmp"
+IDB_KNOB10              BITMAP                  "res\\knob1_1.bmp"
+IDB_EQL                 BITMAP                  "res\\EQL.bmp"
+IDB_EQH                 BITMAP                  "res\\EQH.bmp"
+IDB_SCALE               BITMAP                  "res\\knob_scale120x100.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDB_KNOBER              PNG                     "res\\knob_knob90x90.png"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Open Setting",                ID_FILE_OPENSETTING
+        MENUITEM "Save",                        ID_FILE_SAVE
+        MENUITEM "Save As",                     ID_FILE_SAVEAS
+        MENUITEM "Exit",                        ID_FILE_EXIT
+    END
+    MENUITEM "Sync",                        0
+    POPUP "Presets"
+    BEGIN
+        MENUITEM "Preset1",                     ID_PRESETS_PRESET1
+        MENUITEM "Preset2",                     ID_PRESETS_PRESET2
+        MENUITEM "Preset3",                     ID_PRESETS_PRESET3
+        MENUITEM "Import Preset",               ID_PRESETS_IMPORTPRESET
+        MENUITEM "Export Preset",               ID_PRESETS_EXPORTPRESET
+    END
+    POPUP "Setup"
+    BEGIN
+        MENUITEM "Connect Device",              ID_SETUP_CONNECTDEVICE
+        MENUITEM "Channel Assignment/Nameing",  ID_SETUP_CHANNELASSIGNMENT
+        MENUITEM "Delays On/Off",               ID_SETUP_DELAYSON
+        MENUITEM "Preferences",                 ID_SETUP_PREFERENCE
+    END
+    POPUP "Meters"
+    BEGIN
+        MENUITEM "Signal Input",                ID_METERS_SIGNALINPUT
+        MENUITEM "DSP Output",                  ID_METERS_DSPOUTPUT
+        MENUITEM "Signal Output",               ID_METERS_SIGNALOUTPUT
+        MENUITEM "Foreground",                  ID_METERS_FOREGROUND
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "About",                       ID_HELP_ABOUT
+        MENUITEM "User Manual",                 ID_HELP_USERMANUAL
+    END
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\UIpro.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
