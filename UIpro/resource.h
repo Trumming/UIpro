@@ -117,6 +117,11 @@
 #define IDC_EDIT6                       1060
 #define IDC_EDIT7                       1061
 #define IDC_EDIT8                       1062
+#define IDC_SLIDER10                    1063
+#define IDC_COMBO1                      1064
+#define IDC_COMBO2                      1065
+#define IDC_COMBO3                      1066
+#define IDC_COMBO4                      1067
 #define IDC_KNOB41                      1070
 #define IDC_KNOB42                      1071
 #define IDC_KNOB43                      1072
@@ -165,9 +170,9 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        179
+#define _APS_NEXT_RESOURCE_VALUE        180
 #define _APS_NEXT_COMMAND_VALUE         32790
-#define _APS_NEXT_CONTROL_VALUE         1056
+#define _APS_NEXT_CONTROL_VALUE         1066
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

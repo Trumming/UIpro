@@ -41,3 +41,20 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.htm
+*.user
+*.ncb
+UIpro.suo
+*.old
+UIpro/Release/vc80.idb
+*.pdb
+UIpro/UIpro.aps
+*.XML
+*.obj
+UIpro/Release/mt.dep
+*.manifest
+UIpro/Release/vc90.idb
+*.res
+UIpro/Release/UIpro.pch
+Release/UIpro.exe
+*.rc

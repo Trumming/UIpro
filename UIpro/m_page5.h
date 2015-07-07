@@ -47,4 +47,5 @@ private:
 	bool m_bIsUp;
 public:
 	void ProMoveMsg();
+	CSliderCtrl m_SliderTester;
 };
