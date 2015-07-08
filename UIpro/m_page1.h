@@ -42,4 +42,5 @@ public:
 	int m_GainCH7;
 	int m_GainCH8;
 	float m_AutoDelay;
+	BOOL m_BTandem;
 };

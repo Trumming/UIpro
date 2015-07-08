@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "UIpro.h"
 #include "UIproDlg.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -32,6 +33,7 @@ BEGIN_MESSAGE_MAP(CUIproDlg, CDialog)
 	//ON_WM_LBUTTONUP()
 	//}}AFX_MSG_MAP
 	ON_NOTIFY(TCN_SELCHANGE, IDC_TAB1, &CUIproDlg::OnTcnSelchangeTab1)
+	ON_COMMAND(ID_SETUP_PASSWORD, &CUIproDlg::OnSetupPassword)
 END_MESSAGE_MAP()
 
 
@@ -40,6 +42,10 @@ END_MESSAGE_MAP()
 BOOL CUIproDlg::OnInitDialog()
 {
 	CDialog::OnInitDialog();
+	
+	dlgLogin.DoModal();
+	if(FALSE == dlgLogin.m_bAuthored)
+		EndDialog(TRUE);
 
 	// 设置此对话框的图标。当应用程序主窗口不是对话框时，框架将自动
 	//  执行此操作
@@ -182,3 +188,9 @@ void CUIproDlg::OnLButtonUp( UINT nFlags, CPoint point )
 //}
 
 
+
+void CUIproDlg::OnSetupPassword()
+{
+	// TODO: 在此添加命令处理程序代码
+	dlgLogin.DoModal();
+}

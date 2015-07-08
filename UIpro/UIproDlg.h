@@ -9,7 +9,7 @@
 #include "m_page4.h"
 #include "m_page5.h"
 #include "m_page6.h"
-
+#include "Login.h"
 
 // CUIproDlg ¶Ô»°¿ò
 class CUIproDlg : public CDialog
@@ -44,7 +44,8 @@ public:
 	m_page4 m_page4;
 	m_page5 m_page5;
 	m_page6 m_page6;
-
+	Login dlgLogin;
 public:
 	afx_msg void OnTcnSelchangeTab1(NMHDR *pNMHDR, LRESULT *pResult);
+	afx_msg void OnSetupPassword();
 };

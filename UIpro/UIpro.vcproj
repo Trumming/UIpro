@@ -213,6 +213,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Login.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\m_page1.cpp"
 				>
 			</File>
@@ -303,6 +307,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Login.h"
+				>
+			</File>
+			<File
 				RelativePath=".\m_page1.h"
 				>
 			</File>
@@ -365,6 +373,10 @@
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
 			<File
+				RelativePath=".\res\bitmap2.bmp"
+				>
+			</File>
+			<File
 				RelativePath=".\res\EQ1.bmp"
 				>
 			</File>
@@ -406,6 +418,10 @@
 			</File>
 			<File
 				RelativePath=".\res\GraphicEqualizer.bmp"
+				>
+			</File>
+			<File
+				RelativePath=".\res\HPF.bmp"
 				>
 			</File>
 			<File
@@ -465,6 +481,18 @@
 				>
 			</File>
 			<File
+				RelativePath=".\res\LPF.bmp"
+				>
+			</File>
+			<File
+				RelativePath=".\res\off2.bmp"
+				>
+			</File>
+			<File
+				RelativePath=".\res\on2.bmp"
+				>
+			</File>
+			<File
 				RelativePath=".\res\UIpro.ico"
 				>
 			</File>
@@ -474,6 +502,14 @@
 			</File>
 			<File
 				RelativePath=".\res\UIpro.rc2"
+				>
+			</File>
+			<File
+				RelativePath=".\res\usb_off.bmp"
+				>
+			</File>
+			<File
+				RelativePath=".\res\usb_on.bmp"
 				>
 			</File>
 		</Filter>

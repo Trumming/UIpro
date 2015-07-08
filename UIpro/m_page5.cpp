@@ -47,8 +47,6 @@ void m_page5::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_SLIDER_EQL, m_sliderl);
 	DDX_Control(pDX, IDC_SLIDER_EQH, m_sliderh);
 	DDX_Control(pDX, IDC_STATIC51, m_drawline);
-
-	DDX_Control(pDX, IDC_SLIDER1, m_SliderTester);
 }
 
 
@@ -60,10 +58,6 @@ END_MESSAGE_MAP()
 BOOL m_page5::OnInitDialog()
 {
 	CDialog::OnInitDialog();
-
-	m_SliderTester.SetRange(0,100);
-	m_SliderTester.SetTicFreq(5);
-	m_SliderTester.SetPos(50);
 
 	SetTimer(TIMER1,50,0);
 	m_slider1.SetBitmapIndex(IDB_EQ1);
