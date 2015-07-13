@@ -35,6 +35,7 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
+	afx_msg void OnClose();
 	DECLARE_MESSAGE_MAP()
 public:
 	CTabCtrl m_tabCtrl;

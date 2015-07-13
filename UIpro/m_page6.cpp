@@ -45,6 +45,8 @@ void m_page6::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_SLIDER18, m_SliderCH8);
 
 	DDX_Check(pDX, IDC_CHECK2, m_Tandem);
+
+	DDX_Control(pDX, IDC_STATIC9, m_USBState);
 }
 
 
@@ -130,3 +132,4 @@ void m_page6::OnVScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 		UpdateData(FALSE);
 	}
 }
+

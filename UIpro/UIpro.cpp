@@ -4,12 +4,15 @@
 #include "stdafx.h"
 #include "UIpro.h"
 #include "UIproDlg.h"
+#include  "MainManager.h"
+#include "Cdata.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
-
+Cdata Storage;
+CMainManager main_manager;
 // CUIproApp
 
 BEGIN_MESSAGE_MAP(CUIproApp, CWinApp)

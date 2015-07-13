@@ -1,3 +1,4 @@
+#include "m_page3.h"
 #pragma once
 
 
@@ -42,4 +43,6 @@ private:
 	CSliderCtrl m_SliderVol;
 public:
 	BOOL m_Tandem;
+	CPicEditor m_USBState;
+
 };

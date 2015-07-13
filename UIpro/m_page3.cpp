@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "UIpro.h"
 #include "m_page3.h"
-
+#include"atlimage.h"
 
 // CPicEditor
 CPicEditor::CPicEditor()
@@ -19,34 +19,26 @@ CPicEditor::~CPicEditor()
 
 
 BEGIN_MESSAGE_MAP(CPicEditor, CStatic)
-	ON_WM_LBUTTONUP()
+	ON_WM_LBUTTONDOWN()
 END_MESSAGE_MAP()
 
 void CPicEditor::OnLButtonDown(UINT nFlags, CPoint point)
 {
-	CPaintDC dc(this); // device context for painting
+	CImage img;
 	CRect   rect;   
 	GetClientRect(&rect);   
-	CDC   dcMem;   
-	dcMem.CreateCompatibleDC(&dc);  
-	CBitmap   bmpBackground;
 
 	if(m_bActive)
 	{
-		bmpBackground.LoadBitmap(IDB_ON);
+		m_bActive = false;
+		img.LoadFromResource(AfxGetInstanceHandle(),IDB_OFF);
 	}
 	else
 	{
-		bmpBackground.LoadBitmap(IDB_OFF);
+		m_bActive = true;
+		img.LoadFromResource(AfxGetInstanceHandle(),IDB_ON);
 	}
-	m_bActive = ~m_bActive;
-
-	//IDB_BITMAP是你自己的图对应的ID 
-	BITMAP   bitmap;   
-	bmpBackground.GetBitmap(&bitmap);   
-	CBitmap   *pbmpOld=dcMem.SelectObject(&bmpBackground);   
-	dc.StretchBlt(0,0,rect.Width(),rect.Height(),&dcMem,0,0,bitmap.bmWidth,bitmap.bmHeight,SRCCOPY); 
-	// Do not call CDialog::OnPaint() for painting messages  
+	img.Draw(GetDC()->m_hDC,rect);
 }
 
 // m_page3 dialog
@@ -84,6 +76,13 @@ void m_page3::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_SLIDER1, m_SliderFreq);
 
 	DDX_Control(pDX, IDC_STATIC1, CPicCH1);
+	DDX_Control(pDX, IDC_STATIC2, CPicCH2);
+	DDX_Control(pDX, IDC_STATIC3, CPicCH3);
+	DDX_Control(pDX, IDC_STATIC4, CPicCH4);
+	DDX_Control(pDX, IDC_STATIC5, CPicCH5);
+	DDX_Control(pDX, IDC_STATIC6, CPicCH6);
+	DDX_Control(pDX, IDC_STATIC7, CPicCH7);
+	DDX_Control(pDX, IDC_STATIC8, CPicCH8);
 	DDX_Text(pDX, IDC_EDIT1, m_Freq);
 }
 

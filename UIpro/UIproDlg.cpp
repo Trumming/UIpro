@@ -4,17 +4,15 @@
 #include "stdafx.h"
 #include "UIpro.h"
 #include "UIproDlg.h"
+#include "MainManager.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
+extern CMainManager main_manager;
 
 // CUIproDlg 对话框
-
-
-
-
 CUIproDlg::CUIproDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(CUIproDlg::IDD, pParent)
 {
@@ -34,13 +32,14 @@ BEGIN_MESSAGE_MAP(CUIproDlg, CDialog)
 	//}}AFX_MSG_MAP
 	ON_NOTIFY(TCN_SELCHANGE, IDC_TAB1, &CUIproDlg::OnTcnSelchangeTab1)
 	ON_COMMAND(ID_SETUP_PASSWORD, &CUIproDlg::OnSetupPassword)
+	ON_WM_CLOSE()
 END_MESSAGE_MAP()
-
 
 // CUIproDlg 消息处理程序
 
 BOOL CUIproDlg::OnInitDialog()
 {
+	main_manager.init();
 	CDialog::OnInitDialog();
 	
 	dlgLogin.DoModal();
@@ -193,4 +192,11 @@ void CUIproDlg::OnSetupPassword()
 {
 	// TODO: 在此添加命令处理程序代码
 	dlgLogin.DoModal();
+}
+
+void CUIproDlg::OnClose()
+{
+	CDialog::OnClose();
+	m_page1.SaveData();
+	main_manager.uninit();
 }

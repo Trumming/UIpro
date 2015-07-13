@@ -66,3 +66,7 @@ Release/UIpro.exe
 *.rc
 *.rc
 *.vcproj
+*.sln
+*.ico
+*.rc2
+*.ini

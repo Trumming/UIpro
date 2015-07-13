@@ -5,7 +5,10 @@
 #include "UIpro.h"
 #include "m_page1.h"
 
+#include "Cdata.h"
 
+extern Cdata Storage;
+//extern CMainManager main_manager;
 // m_page1 dialog
 
 IMPLEMENT_DYNAMIC(m_page1, CDialog)
@@ -14,8 +17,11 @@ m_page1::m_page1(CWnd* pParent /*=NULL*/)
 	: CDialog(m_page1::IDD, pParent)
 	, m_AutoDelay(0)
 	, m_BTandem(FALSE)
+	, m_SysSelNbr(0)
+	, m_InputNbr(0)
+	, m_DigitalNbr(0)
+	, m_AnalogNbr(0)
 {
-
 }
 
 m_page1::~m_page1()
@@ -44,6 +50,10 @@ void m_page1::DoDataExchange(CDataExchange* pDX)
 	DDX_Text(pDX, IDC_EDIT8, m_GainCH8);
 	DDX_Text(pDX, IDC_EDIT_AUTOSELECTDELAY, m_AutoDelay);
 	DDX_Check(pDX, IDC_CHECK1, m_BTandem);
+	DDX_Radio(pDX, IDC_RADIO1, m_SysSelNbr);
+	DDX_Radio(pDX, IDC_RADIO7, m_InputNbr);
+	DDX_Radio(pDX, IDC_RADIO12, m_DigitalNbr);
+	DDX_Radio(pDX, IDC_RADIO10, m_AnalogNbr);
 }
 
 
@@ -58,54 +68,64 @@ BOOL m_page1::OnInitDialog()
 {
 	CDialog::OnInitDialog();
 	int min = -64,max = 24;
+
 	m_SliderAutoDelay.SetRange(1,50);
 	m_SliderAutoDelay.SetTicFreq(1);
-	m_SliderAutoDelay.SetPos(0);
+	m_SliderAutoDelay.SetPos(Storage.get_int_data(Storage.DATA_PAGE1_AUTODELAY));
 	m_AutoDelay = (float)(m_SliderAutoDelay.GetPos()*0.1f);
 
+	m_GainCH1 = Storage.get_int_data(Storage.DATA_PAGE1_SLIDER_CH1);
 	m_SliderCH1.SetRange(min,max);
 	m_SliderCH1.SetTicFreq(1);
-	m_SliderCH1.SetPos(0);
+	m_SliderCH1.SetPos(m_GainCH1);
 
+	m_GainCH2 = Storage.get_int_data(Storage.DATA_PAGE1_SLIDER_CH2);
 	m_SliderCH2.SetRange(min,max);
 	m_SliderCH2.SetTicFreq(1);
-	m_SliderCH2.SetPos(0);
+	m_SliderCH2.SetPos(m_GainCH2);
 
+	m_GainCH3 = Storage.get_int_data(Storage.DATA_PAGE1_SLIDER_CH3);
 	m_SliderCH3.SetRange(min,max);
 	m_SliderCH3.SetTicFreq(1);
-	m_SliderCH3.SetPos(0);
+	m_SliderCH3.SetPos(m_GainCH3);
 
+	m_GainCH4 = Storage.get_int_data(Storage.DATA_PAGE1_SLIDER_CH4);
 	m_SliderCH4.SetRange(min,max);
 	m_SliderCH4.SetTicFreq(1);
-	m_SliderCH4.SetPos(0);
+	m_SliderCH4.SetPos(m_GainCH4);
 
+	m_GainCH5 = Storage.get_int_data(Storage.DATA_PAGE1_SLIDER_CH5);
 	m_SliderCH5.SetRange(min,max);
 	m_SliderCH5.SetTicFreq(1);
-	m_SliderCH5.SetPos(0);
+	m_SliderCH5.SetPos(m_GainCH5);
 
+	m_GainCH6 = Storage.get_int_data(Storage.DATA_PAGE1_SLIDER_CH6);
 	m_SliderCH6.SetRange(min,max);
 	m_SliderCH6.SetTicFreq(1);
-	m_SliderCH6.SetPos(0);
+	m_SliderCH6.SetPos(m_GainCH6);
 
+	m_GainCH7 = Storage.get_int_data(Storage.DATA_PAGE1_SLIDER_CH7);
 	m_SliderCH7.SetRange(min,max);
 	m_SliderCH7.SetTicFreq(1);
-	m_SliderCH7.SetPos(0);
+	m_SliderCH7.SetPos(m_GainCH7);
 
+	m_GainCH8 = Storage.get_int_data(Storage.DATA_PAGE1_SLIDER_CH8);
 	m_SliderCH8.SetRange(min,max);
 	m_SliderCH8.SetTicFreq(1);
-	m_SliderCH8.SetPos(0);
+	m_SliderCH8.SetPos(m_GainCH8);
 
-	m_GainCH1 = m_SliderCH1.GetPos();
-	m_GainCH2 = m_SliderCH2.GetPos();
-	m_GainCH3 = m_SliderCH3.GetPos();
-	m_GainCH4 = m_SliderCH4.GetPos();
-	m_GainCH5 = m_SliderCH5.GetPos();
-	m_GainCH6 = m_SliderCH6.GetPos();
-	m_GainCH7 = m_SliderCH7.GetPos();
-	m_GainCH8 = m_SliderCH8.GetPos();
+	//System Select
+	m_SysSelNbr = Storage.get_char_data(Storage.DATA_PAGE1_SYS_SEL);
+	//Preset
+	//Input
+	m_InputNbr = Storage.get_char_data(Storage.DATA_PAGE1_INPUT);
+	//Input - Digital
+	m_DigitalNbr = Storage.get_char_data(Storage.DATA_PAGE1_DIGITAL);
+	//Input Analog
+	m_AnalogNbr = Storage.get_char_data(Storage.DATA_PAGE1_ANALOG);
 
-	//m_SliderCH8.SetBuddy(GetDlgItem(IDC_EDIT8),TRUE); //控件关联，貌似并没什么卵用
-
+	m_BTandem = Storage.get_bool_data(Storage.DATA_PAGE1_TANDEM);
+	UpdateData(FALSE);
 	return TRUE;
 }
 
@@ -151,3 +171,21 @@ void m_page1::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 	}
 }
 
+void m_page1::SaveData(void)
+{
+	UpdateData(TRUE);
+	Storage.set_char_data((char)m_SysSelNbr,Storage.DATA_PAGE1_SYS_SEL);
+	Storage.set_char_data((char)m_InputNbr,Storage.DATA_PAGE1_INPUT);
+	Storage.set_char_data((char)m_DigitalNbr,Storage.DATA_PAGE1_DIGITAL);
+	Storage.set_char_data((char)m_AnalogNbr,Storage.DATA_PAGE1_ANALOG);
+	Storage.set_int_data(m_SliderAutoDelay.GetPos(), Storage.DATA_PAGE1_AUTODELAY);
+	Storage.set_int_data(m_SliderCH1.GetPos(), Storage.DATA_PAGE1_SLIDER_CH1);
+	Storage.set_int_data(m_SliderCH2.GetPos(), Storage.DATA_PAGE1_SLIDER_CH2);
+	Storage.set_int_data(m_SliderCH3.GetPos(), Storage.DATA_PAGE1_SLIDER_CH3);
+	Storage.set_int_data(m_SliderCH4.GetPos(), Storage.DATA_PAGE1_SLIDER_CH4);
+	Storage.set_int_data(m_SliderCH5.GetPos(), Storage.DATA_PAGE1_SLIDER_CH5);
+	Storage.set_int_data(m_SliderCH6.GetPos(), Storage.DATA_PAGE1_SLIDER_CH6);
+	Storage.set_int_data(m_SliderCH7.GetPos(), Storage.DATA_PAGE1_SLIDER_CH7);
+	Storage.set_int_data(m_SliderCH8.GetPos(), Storage.DATA_PAGE1_SLIDER_CH8);
+	Storage.set_bool_data(m_BTandem,Storage.DATA_PAGE1_TANDEM);
+}

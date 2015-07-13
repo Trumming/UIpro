@@ -17,7 +17,7 @@ protected:
 	DECLARE_MESSAGE_MAP()
 
 private:
-	BOOL m_bActive;
+	bool m_bActive;
 };
 
 // m_page3 dialog
@@ -51,4 +51,11 @@ public:
 
 public:
 	CPicEditor CPicCH1;
+	CPicEditor CPicCH2;
+	CPicEditor CPicCH3;
+	CPicEditor CPicCH4;
+	CPicEditor CPicCH5;
+	CPicEditor CPicCH6;
+	CPicEditor CPicCH7;
+	CPicEditor CPicCH8;
 };

@@ -13,6 +13,7 @@ public:
 	virtual ~m_page1();
 	virtual BOOL OnInitDialog();
 
+	void SaveData(void);
 // Dialog Data
 	enum { IDD = IDD_DIALOG1 };
 
@@ -43,4 +44,20 @@ public:
 	int m_GainCH8;
 	float m_AutoDelay;
 	BOOL m_BTandem;
+	//BOOL m_SysSel_51CH;
+	//BOOL m_SysSel_61CH;
+	//BOOL m_SysSel_8CH;
+	//BOOL m_Input_Analog;
+	//BOOL m_Input_Digital;
+	//BOOL m_Input_Auto;
+	//BOOL m_Digital_Optical;
+	//BOOL m_Digital_Coax;
+	//BOOL m_Digital_Bluetooth;
+	//BOOL m_Analog_Rca;
+	//BOOL m_Analog_Aux;
+//	afx_msg void OnBnClickedRadio3();
+	int m_SysSelNbr;
+	int m_InputNbr;
+	int m_DigitalNbr;
+	int m_AnalogNbr;
 };
